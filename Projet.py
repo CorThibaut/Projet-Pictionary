@@ -103,11 +103,11 @@ while(1):
             x1,y1 =0,0
 
         mask_1 = cv2.cvtColor(mask, cv2.COLOR_GRAY2BGR)
-        frame_added = cv2.addWeighted(frame,0.5,canvas,0.5,0)
+        frameAdded = cv2.addWeighted(frame,0.5,canvas,0.5,0)
         res = cv2.bitwise_and(frame, frame, mask=mask)
-        stacked = np.hstack((frame_added, res))
+        frameStack = np.hstack((frameAdded, res))
 
-        cv2.imshow('Pixionary',cv2.resize(stacked,None,fx=0.6,fy=0.6))
+        cv2.imshow('Pixionary',cv2.resize(frameStack,None,fx=0.6,fy=0.6))
         
 
 
